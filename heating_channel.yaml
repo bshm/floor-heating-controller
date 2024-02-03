@@ -55,7 +55,7 @@ cover:
     stop_action:
       - switch.turn_off: CH${channel_number}_IA_pin
       - switch.turn_off: CH${channel_number}_IB_pin
-    max_duration : 35s
+    max_duration : 60s
     #assumed_state: true
     id: CH${channel_number}_cover
 
