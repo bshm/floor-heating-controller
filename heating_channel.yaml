@@ -58,7 +58,14 @@ cover:
     max_duration : 65s
     #assumed_state: true
     id: CH${channel_number}_cover
-    
+
+sensor:
+  - platform: template
+    name: CH${channel_number}_position
+    lambda: |-
+      return id(CH${channel_number}_cover).position;
+    update_interval: 1s
+
 number:
   - platform: template
     name: "bemf_trigger_${channel_number}"

@@ -84,7 +84,7 @@ packages:
       visual_min_temperature: "10 °C"
       visual_max_temperature: "30 °C"
       visual_temperature_step: "0.1 °C"
-      check_interval: "15min"
+      check_interval: "1min"
       bemf_trigger_initial_value: "0.105"
       # do not change : 
       bemf_sensor_adc: BEMF_1_2_sensor_ADC
@@ -115,7 +115,7 @@ packages:
       visual_min_temperature: "10 °C"
       visual_max_temperature: "30 °C"
       visual_temperature_step: "0.1 °C"
-      check_interval: "17min"
+      check_interval: "1min"
       bemf_trigger_initial_value: "0.105"
       ## do not change :
       bemf_sensor_adc: BEMF_3_4_sensor_ADC
@@ -146,7 +146,7 @@ packages:
       visual_min_temperature: "10 °C"
       visual_max_temperature: "30 °C"
       visual_temperature_step: "0.1 °C"
-      check_interval: "15min"
+      check_interval: "1min"
       bemf_trigger_initial_value: "0.105"
       ## do not change :
       bemf_sensor_adc: BEMF_5_6_sensor_ADC
@@ -177,7 +177,7 @@ packages:
       visual_min_temperature: "10 °C"
       visual_max_temperature: "30 °C"
       visual_temperature_step: "0.1 °C"
-      check_interval: "17min"
+      check_interval: "1min"
       bemf_trigger_initial_value: "0.105"
       ## do not change :
       bemf_sensor_adc: BEMF_7_8_sensor_ADC
