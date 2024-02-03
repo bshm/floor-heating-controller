@@ -16,7 +16,7 @@ substitutions:
   framework: esp-idf #arduino
   
   #time
-  TZ: "Europe/Zurich" #timezone
+  TZ: "Europe/Berlin" #timezone
   reboot_days_of_week: "MON"
   reboot_hours: "5"
   reboot_minutes: "0"
@@ -67,7 +67,7 @@ packages:
       channel_number: 1
       id: wc
       frendly_name: wc
-      temperature_sensor: corridor_temperature_sensor #must match one sensor defined in sensor_temperature.yaml
+      temperature_sensor: pvvx_temperature1 #must match one sensor defined in sensor_temperature.yaml
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -92,48 +92,13 @@ packages:
       sn74hc595_IA_pin: 0
       sn74hc595_IB_pin: 1
       
-      
-
-  channel_2: !include
-    file: heating_channel.yaml
-    vars:
-      channel_number: 2
-      id: storage
-      frendly_name: storage
-      temperature_sensor: reduit_temperature_sensor
-      default_preset: home
-      preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
-      preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
-      preset_1_target_temperature_low: "19 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
-      preset_1_target_temperature_high: "20 °C"
-      preset_2_name: away 
-      preset_2_mode: HEAT_COOL
-      preset_2_target_temperature_low: "18 °C"
-      preset_2_target_temperature_high: "19 °C"
-      preset_3_name: boost 
-      preset_3_mode: HEAT_COOL
-      preset_3_target_temperature_low: "23 °C"
-      preset_3_target_temperature_high: "24 °C"
-      visual_min_temperature: "10 °C"
-      visual_max_temperature: "30 °C"
-      visual_temperature_step: "0.1 °C"
-      check_interval: "16min"
-      bemf_trigger_initial_value: "0.105"
-      ## do not change : 
-      bemf_sensor_adc: BEMF_1_2_sensor_ADC
-      bemf_linked_with_channel: 1
-      sn74hc595_IA_pin: 2
-      sn74hc595_IB_pin: 3
-      
-
-      
   channel_3: !include
     file: heating_channel.yaml
     vars:
       channel_number: 3
       id: living
       frendly_name: living
-      temperature_sensor: living_room_temperature_sensor
+      temperature_sensor: pvvx_temperature2
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -158,46 +123,13 @@ packages:
       sn74hc595_IA_pin: 4
       sn74hc595_IB_pin: 5
       
-      
-  channel_4: !include
-    file: heating_channel.yaml
-    vars:
-      channel_number: 4
-      id: dining
-      frendly_name: dining
-      temperature_sensor: indoor_temperature_sensor
-      default_preset: home
-      preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
-      preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
-      preset_1_target_temperature_low: "21 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
-      preset_1_target_temperature_high: "23 °C"
-      preset_2_name: away 
-      preset_2_mode: HEAT_COOL
-      preset_2_target_temperature_low: "18 °C"
-      preset_2_target_temperature_high: "19 °C"
-      preset_3_name: boost 
-      preset_3_mode: HEAT_COOL
-      preset_3_target_temperature_low: "23 °C"
-      preset_3_target_temperature_high: "24 °C"
-      visual_min_temperature: "10 °C"
-      visual_max_temperature: "30 °C"
-      visual_temperature_step: "0.1 °C"
-      check_interval: "18min"  
-      bemf_trigger_initial_value: "0.105"
-      ## do not change :
-      bemf_sensor_adc: BEMF_3_4_sensor_ADC
-      bemf_linked_with_channel: 3
-      sn74hc595_IA_pin: 6
-      sn74hc595_IB_pin: 7
-        
-      
   channel_5: !include
     file: heating_channel.yaml
     vars:
       channel_number: 5
       id: kitchen
       frendly_name: kitchen
-      temperature_sensor: living_room_temperature_sensor
+      temperature_sensor: pvvx_temperature3
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -221,47 +153,14 @@ packages:
       bemf_linked_with_channel: 6
       sn74hc595_IA_pin: 8
       sn74hc595_IB_pin: 9
-      
-      
-  channel_6: !include
-    file: heating_channel.yaml
-    vars:
-      channel_number: 6
-      id: office
-      frendly_name: office
-      temperature_sensor: office_temperature_sensor
-      default_preset: home
-      preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
-      preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
-      preset_1_target_temperature_low: "20 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
-      preset_1_target_temperature_high: "21 °C"
-      preset_2_name: away 
-      preset_2_mode: HEAT_COOL
-      preset_2_target_temperature_low: "18 °C"
-      preset_2_target_temperature_high: "19 °C"
-      preset_3_name: boost 
-      preset_3_mode: HEAT_COOL
-      preset_3_target_temperature_low: "23 °C"
-      preset_3_target_temperature_high: "24 °C"
-      visual_min_temperature: "10 °C"
-      visual_max_temperature: "30 °C"
-      visual_temperature_step: "0.1 °C"
-      check_interval: "16min"
-      bemf_trigger_initial_value: "0.090"
-      ## do not change :
-      bemf_sensor_adc: BEMF_5_6_sensor_ADC
-      bemf_linked_with_channel: 5
-      sn74hc595_IA_pin: 10
-      sn74hc595_IB_pin: 11
-      
-      
+  
   channel_7: !include
     file: heating_channel.yaml
     vars:
       channel_number: 7
       id: bedroom
       frendly_name: bedroom
-      temperature_sensor: bedroom_temperature_sensor
+      temperature_sensor: pvvx_temperature4
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -285,38 +184,6 @@ packages:
       bemf_linked_with_channel: 8
       sn74hc595_IA_pin: 12
       sn74hc595_IB_pin: 13
-         
-      
-  channel_8: !include
-    file: heating_channel.yaml
-    vars:
-      channel_number: 8
-      id: bathroom
-      frendly_name: bathroom
-      temperature_sensor: bathroom_temperature_sensor
-      default_preset: home
-      preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
-      preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
-      preset_1_target_temperature_low: "22 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
-      preset_1_target_temperature_high: "24 °C"
-      preset_2_name: away 
-      preset_2_mode: HEAT_COOL
-      preset_2_target_temperature_low: "18 °C"
-      preset_2_target_temperature_high: "19 °C"
-      preset_3_name: boost 
-      preset_3_mode: HEAT_COOL
-      preset_3_target_temperature_low: "23 °C"
-      preset_3_target_temperature_high: "25 °C"
-      visual_min_temperature: "10 °C"
-      visual_max_temperature: "30 °C"
-      visual_temperature_step: "0.1 °C"
-      check_interval: "18min"
-      bemf_trigger_initial_value: "0.105"
-      ## do not change :
-      bemf_sensor_adc: BEMF_7_8_sensor_ADC
-      bemf_linked_with_channel: 7
-      sn74hc595_IA_pin: 14
-      sn74hc595_IB_pin: 15
          
 
 

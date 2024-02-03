@@ -98,10 +98,10 @@ script:
                 if (id(${id}_thermostat).mode == CLIMATE_MODE_OFF) {return;}
                 ESP_LOGD("main", "TH${channel_number}_check triggered");
                 // check if any others actuator is running. If yes, stop action and return. 
-                if (id(CH${bemf_linked_with_channel}_cover).current_operation != COVER_OPERATION_IDLE) {
-                       ESP_LOGD("main", "CH${bemf_linked_with_channel} running cause CH${channel_number} cancel operation");
-                       return;
-                } 
+                //if (id(CH${bemf_linked_with_channel}_cover).current_operation != COVER_OPERATION_IDLE) {
+                //       ESP_LOGD("main", "CH${bemf_linked_with_channel} running cause CH${channel_number} cancel operation");
+                //       return;
+                //} 
                 // get info from climate
                 //float current_temp = id(${id}_thermostat).current_temperature;
                 //float target_temp_low = id(${id}_thermostat).target_temperature_low;

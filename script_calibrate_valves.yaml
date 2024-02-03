@@ -8,9 +8,5 @@ script:
       - script.execute: calibrate_CH3_cover
       - script.execute: calibrate_CH5_cover
       - script.execute: calibrate_CH7_cover
-      - delay: 300s
-      - script.execute: calibrate_CH2_cover
-      - script.execute: calibrate_CH4_cover
-      - script.execute: calibrate_CH6_cover
-      - script.execute: calibrate_CH8_cover
+
       
