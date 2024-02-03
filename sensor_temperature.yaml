@@ -1,40 +1,6 @@
 
 sensor:
-  - platform: homeassistant
-    name: "Office temperature sensor from hassio"
-    entity_id: sensor.bureau_temperature
-    #update_interval: 60s
-    id: office_temperature_sensor
 
-  - platform: homeassistant
-    name: "Living room temperature sensor from hassio"
-    entity_id: sensor.salon_temperature
-    id: living_room_temperature_sensor
-
-  - platform: homeassistant
-    name: "Bedroom temperature sensor from hassio"
-    entity_id: sensor.chambre_temperature
-    id: bedroom_temperature_sensor
-
-  - platform: homeassistant
-    name: "Bathroom temperature sensor from hassio"
-    entity_id: sensor.bain_temperature
-    id: bathroom_temperature_sensor
-    
-  - platform: homeassistant
-    name: "Corridor temperature sensor from hassio"
-    entity_id: sensor.corridor_temperature
-    id: corridor_temperature_sensor
-
-  - platform: homeassistant
-    name: "Storage temperature sensor from hassio"
-    entity_id: sensor.reduit_temperature
-    id: reduit_temperature_sensor
-    
-  - platform: homeassistant
-    name: "Indoor temperature sensor from hassio"
-    entity_id: sensor.indoor_temperature
-    id: indoor_temperature_sensor
 
 
 ###### Other temperature sensor sample #######
@@ -64,7 +30,76 @@ sensor:
       # name: "Corridor Xiaomi LYWSDCGQ Battery Level"
       # id: xiaomi_corridor_battery_level
 
-      
+  - platform: pvvx_mithermometer
+    mac_address: "2D:34:11:EB:14:FF"
+    temperature:
+      name: "PVVX Temperature1"
+      id: pvvx_temperature1
+    humidity:
+      name: "PVVX Humidity1"
+    battery_level:
+      name: "PVVX Battery-Level1"
+    battery_voltage:
+      name: "PVVX Battery-Voltage1"
+    signal_strength:
+      name: "PVVX Signal1"
+
+  - platform: pvvx_mithermometer
+    mac_address: "2D:34:11:EB:6A:FF"
+    temperature:
+      name: "PVVX Temperature2"
+      id: pvvx_temperature2
+    humidity:
+      name: "PVVX Humidity2"
+    battery_level:
+      name: "PVVX Battery-Level2"
+    battery_voltage:
+      name: "PVVX Battery-Voltage2"
+    signal_strength:
+      name: "PVVX Signal2"
+
+  - platform: pvvx_mithermometer
+    mac_address: "2D:34:11:EB:52:FF"
+    temperature:
+      name: "PVVX Temperature3"
+      id: pvvx_temperature3
+    humidity:
+      name: "PVVX Humidity3"
+    battery_level:
+      name: "PVVX Battery-Level3"
+    battery_voltage:
+      name: "PVVX Battery-Voltage3"
+    signal_strength:
+      name: "PVVX Signal3"
+
+  - platform: pvvx_mithermometer
+    mac_address: "2D:34:11:E1:C3:FF"
+    temperature:
+      name: "PVVX Temperature4"
+      id: pvvx_temperature4
+    humidity:
+      name: "PVVX Humidity4"
+    battery_level:
+      name: "PVVX Battery-Level4"
+    battery_voltage:
+      name: "PVVX Battery-Voltage4"
+    signal_strength:
+      name: "PVVX Signal4"
+
+  - platform: pvvx_mithermometer
+    mac_address: "2D:34:11:C9:B7:FF"
+    temperature:
+      name: "PVVX Temperature5"
+      id: pvvx_temperature5
+    humidity:
+      name: "PVVX Humidity5"
+    battery_level:
+      name: "PVVX Battery-Level5"
+    battery_voltage:
+      name: "PVVX Battery-Voltage5"
+    signal_strength:
+      name: "PVVX Signal5"
+
 # Connect 1-Wire bus with DS18B20 temperature sensors
 
 # dallas:
