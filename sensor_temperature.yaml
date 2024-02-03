@@ -33,58 +33,58 @@ sensor:
   - platform: pvvx_mithermometer
     mac_address: "2D:34:11:EB:14:FF"
     temperature:
-      name: "PVVX Temperature1"
-      id: pvvx_temperature1
+      name: "PVVX Temperature Livingroom Front"
+      id: pvvx_temperature_livingroom_front
     humidity:
-      name: "PVVX Humidity1"
+      name: "PVVX Humidity Livingroom Front"
     battery_level:
-      name: "PVVX Battery-Level1"
+      name: "PVVX Battery-Level Livingroom Front"
     battery_voltage:
-      name: "PVVX Battery-Voltage1"
+      name: "PVVX Battery-Voltage Livingroom Front"
     signal_strength:
-      name: "PVVX Signal1"
+      name: "PVVX Signal Livingroom Front"
 
   - platform: pvvx_mithermometer
     mac_address: "2D:34:11:EB:6A:FF"
     temperature:
-      name: "PVVX Temperature2"
-      id: pvvx_temperature2
+      name: "PVVX Temperature Livingroom Back"
+      id: pvvx_temperature_livingroom_back
     humidity:
-      name: "PVVX Humidity2"
+      name: "PVVX Humidity Livingroom Back"
     battery_level:
-      name: "PVVX Battery-Level2"
+      name: "PVVX Battery-Level Livingroom Back"
     battery_voltage:
-      name: "PVVX Battery-Voltage2"
+      name: "PVVX Battery-Voltage Livingroom Back"
     signal_strength:
-      name: "PVVX Signal2"
+      name: "PVVX Signal Livingroom Back"
 
   - platform: pvvx_mithermometer
     mac_address: "2D:34:11:EB:52:FF"
     temperature:
-      name: "PVVX Temperature3"
-      id: pvvx_temperature3
+      name: "PVVX Temperature Kitchen"
+      id: pvvx_temperature_kitchen
     humidity:
-      name: "PVVX Humidity3"
+      name: "PVVX Humidity Kitchen"
     battery_level:
-      name: "PVVX Battery-Level3"
+      name: "PVVX Battery-Level Kitchen"
     battery_voltage:
-      name: "PVVX Battery-Voltage3"
+      name: "PVVX Battery-Voltage Kitchen"
     signal_strength:
-      name: "PVVX Signal3"
+      name: "PVVX Signal Kitchen"
 
   - platform: pvvx_mithermometer
     mac_address: "2D:34:11:E1:C3:FF"
     temperature:
-      name: "PVVX Temperature4"
-      id: pvvx_temperature4
+      name: "PVVX Temperature WC"
+      id: pvvx_temperature_wc
     humidity:
-      name: "PVVX Humidity4"
+      name: "PVVX Humidity WC"
     battery_level:
-      name: "PVVX Battery-Level4"
+      name: "PVVX Battery-Level WC"
     battery_voltage:
-      name: "PVVX Battery-Voltage4"
+      name: "PVVX Battery-Voltage WC"
     signal_strength:
-      name: "PVVX Signal4"
+      name: "PVVX Signal WC"
 
   - platform: pvvx_mithermometer
     mac_address: "2D:34:11:C9:B7:FF"

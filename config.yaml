@@ -31,7 +31,7 @@ web_server:
   
 # Enable Home Assistant API
 api:
-  reboot_timeout: 30min
+#  reboot_timeout: 30min
 
   
 ############## Channels definition (packages as template : https://esphome.io/guides/configuration-types.html#packages-as-templates)
@@ -65,9 +65,9 @@ packages:
     file: heating_channel.yaml
     vars:
       channel_number: 1
-      id: wc
-      frendly_name: wc
-      temperature_sensor: pvvx_temperature1 #must match one sensor defined in sensor_temperature.yaml
+      id: livingroom_back
+      frendly_name: livingroom_back
+      temperature_sensor: pvvx_temperature_livingroom_back
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -96,9 +96,9 @@ packages:
     file: heating_channel.yaml
     vars:
       channel_number: 3
-      id: living
-      frendly_name: living
-      temperature_sensor: pvvx_temperature2
+      id: livingroom_front
+      frendly_name: livingroom_front
+      temperature_sensor: pvvx_temperature_livingroom_front
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -129,7 +129,7 @@ packages:
       channel_number: 5
       id: kitchen
       frendly_name: kitchen
-      temperature_sensor: pvvx_temperature3
+      temperature_sensor: pvvx_temperature_kitchen
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -158,9 +158,9 @@ packages:
     file: heating_channel.yaml
     vars:
       channel_number: 7
-      id: bedroom
-      frendly_name: bedroom
-      temperature_sensor: pvvx_temperature4
+      id: wc
+      frendly_name: wc
+      temperature_sensor: pvvx_temperature_wc
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
