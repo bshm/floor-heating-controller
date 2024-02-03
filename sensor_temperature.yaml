@@ -17,7 +17,7 @@ sensor:
     # update_interval: 30s
 
 
-    
+
   # - platform: xiaomi_lywsdcgq
     # mac_address: 58:2D:34:37:F1:10
     # temperature:
