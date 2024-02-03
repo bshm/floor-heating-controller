@@ -7,14 +7,14 @@
 ############## General configuration
 
 substitutions:
-  name: floor-heating-controller
-  friendly_name: "Floor heating"
+  name: floor-heating-og
+  friendly_name: "Floor heating OG"
   revision: "1.108"
-  
+
   #board and compilation
   board: nodemcu-32s
   framework: esp-idf #arduino
-  
+
   #time
   TZ: "Europe/Berlin" #timezone
   reboot_days_of_week: "MON"
@@ -23,17 +23,17 @@ substitutions:
   reboot_seconds: "0"
   # valve_maintenance_interval: "7days"
   onboot_valve_calibration_delay: "1min"
- 
-  
+
+
 web_server:
   port: 80
   # log: false
-  
+
 # Enable Home Assistant API
 api:
 #  reboot_timeout: 30min
 
-  
+
 ############## Channels definition (packages as template : https://esphome.io/guides/configuration-types.html#packages-as-templates)
 packages:
 
@@ -44,7 +44,7 @@ packages:
       # channel_number: 1
       # id: wc #bad
       # frendly_name: wc #bad
-      # temperature_sensor: corridor_temperature_sensor #ATC_51C199_Temperature  
+      # temperature_sensor: corridor_temperature_sensor #ATC_51C199_Temperature
       # default_target_temperature: "21 °C"
       # pid_kp: "0.06"
       # pid_ki: "0.00011"
@@ -54,7 +54,7 @@ packages:
       # visual_temperature_step: "0.1 °C"
       # check_interval: "15min"
       # bemf_trigger_initial_value: "0.105"
-      ### do not change : 
+      ### do not change :
       # bemf_sensor_adc: BEMF_1_2_sensor_ADC
       # bemf_linked_with_channel: 2
       # sn74hc595_IA_pin: 0
@@ -73,11 +73,11 @@ packages:
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
       preset_1_target_temperature_low: "19 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
       preset_1_target_temperature_high: "20 °C"
-      preset_2_name: away 
+      preset_2_name: away
       preset_2_mode: HEAT_COOL
       preset_2_target_temperature_low: "18 °C"
       preset_2_target_temperature_high: "19 °C"
-      preset_3_name: boost 
+      preset_3_name: boost
       preset_3_mode: HEAT_COOL
       preset_3_target_temperature_low: "23 °C"
       preset_3_target_temperature_high: "24 °C"
@@ -86,12 +86,12 @@ packages:
       visual_temperature_step: "0.1 °C"
       check_interval: "1min"
       bemf_trigger_initial_value: "0.105"
-      # do not change : 
+      # do not change :
       bemf_sensor_adc: BEMF_1_2_sensor_ADC
       bemf_linked_with_channel: 2
       sn74hc595_IA_pin: 0
       sn74hc595_IB_pin: 1
-      
+
   channel_3: !include
     file: heating_channel.yaml
     vars:
@@ -104,11 +104,11 @@ packages:
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
       preset_1_target_temperature_low: "21 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
       preset_1_target_temperature_high: "23 °C"
-      preset_2_name: away 
+      preset_2_name: away
       preset_2_mode: HEAT_COOL
       preset_2_target_temperature_low: "18 °C"
       preset_2_target_temperature_high: "19 °C"
-      preset_3_name: boost 
+      preset_3_name: boost
       preset_3_mode: HEAT_COOL
       preset_3_target_temperature_low: "23 °C"
       preset_3_target_temperature_high: "24 °C"
@@ -122,7 +122,7 @@ packages:
       bemf_linked_with_channel: 4
       sn74hc595_IA_pin: 4
       sn74hc595_IB_pin: 5
-      
+
   channel_5: !include
     file: heating_channel.yaml
     vars:
@@ -135,11 +135,11 @@ packages:
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
       preset_1_target_temperature_low: "21 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
       preset_1_target_temperature_high: "23 °C"
-      preset_2_name: away 
+      preset_2_name: away
       preset_2_mode: HEAT_COOL
       preset_2_target_temperature_low: "18 °C"
       preset_2_target_temperature_high: "19 °C"
-      preset_3_name: boost 
+      preset_3_name: boost
       preset_3_mode: HEAT_COOL
       preset_3_target_temperature_low: "23 °C"
       preset_3_target_temperature_high: "24 °C"
@@ -153,7 +153,7 @@ packages:
       bemf_linked_with_channel: 6
       sn74hc595_IA_pin: 8
       sn74hc595_IB_pin: 9
-  
+
   channel_7: !include
     file: heating_channel.yaml
     vars:
@@ -166,11 +166,11 @@ packages:
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
       preset_1_target_temperature_low: "16 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
       preset_1_target_temperature_high: "18 °C"
-      preset_2_name: away 
+      preset_2_name: away
       preset_2_mode: HEAT_COOL
       preset_2_target_temperature_low: "16 °C"
       preset_2_target_temperature_high: "18 °C"
-      preset_3_name: boost 
+      preset_3_name: boost
       preset_3_mode: HEAT_COOL
       preset_3_target_temperature_low: "23 °C"
       preset_3_target_temperature_high: "24 °C"
@@ -184,7 +184,7 @@ packages:
       bemf_linked_with_channel: 8
       sn74hc595_IA_pin: 12
       sn74hc595_IB_pin: 13
-         
+
 
 
   wifi: !include wifi.yaml
@@ -201,6 +201,3 @@ packages:
   sensor_adc: !include sensor_adc.yaml
   sensor_temperature: !include sensor_temperature.yaml
   sensor_others: !include sensor_others.yaml
-  
-
-
