@@ -89,16 +89,58 @@ sensor:
   - platform: pvvx_mithermometer
     mac_address: "2D:34:11:C9:B7:FF"
     temperature:
-      name: "PVVX Temperature5"
-      id: pvvx_temperature5
+      name: "PVVX Temperature Rumpelkammer"
+      id: pvvx_temperature_rumpelkammer
     humidity:
-      name: "PVVX Humidity5"
+      name: "PVVX Humidity Rumpelkammer"
     battery_level:
-      name: "PVVX Battery-Level5"
+      name: "PVVX Battery-Level Rumpelkammer"
     battery_voltage:
-      name: "PVVX Battery-Voltage5"
+      name: "PVVX Battery-Voltage Rumpelkammer"
     signal_strength:
-      name: "PVVX Signal5"
+      name: "PVVX Signal Rumpelkammer"
+
+  - platform: pvvx_mithermometer
+    mac_address: "58:2d:34:82:58:47"
+    temperature:
+      name: "PVVX Temperature Schlafzimmer"
+      id: pvvx_temperature_bedroom
+    humidity:
+      name: "PVVX Humidity Schlafzimmer"
+    battery_level:
+      name: "PVVX Battery-Level Schlafzimmer"
+    battery_voltage:
+      name: "PVVX Battery-Voltage Schlafzimmer"
+    signal_strength:
+      name: "PVVX Signal Schlafzimmer"
+
+  - platform: pvvx_mithermometer
+    mac_address: "58:2d:34:82:58:42"
+    temperature:
+      name: "PVVX Temperature Bad"
+      id: pvvx_temperature_bathroom
+    humidity:
+      name: "PVVX Humidity Bad"
+    battery_level:
+      name: "PVVX Battery-Level Bad"
+    battery_voltage:
+      name: "PVVX Battery-Voltage Bad"
+    signal_strength:
+      name: "PVVX Signal Bad"
+
+  - platform: pvvx_mithermometer
+    mac_address: "58:2d:34:82:58:7a"
+    temperature:
+      name: "PVVX Temperature Flur OG"
+      id: pvvx_temperature_corridor_upper_floor
+    humidity:
+      name: "PVVX Humidity Flur OG"
+    battery_level:
+      name: "PVVX Battery-Level Flur OG"
+    battery_voltage:
+      name: "PVVX Battery-Voltage Flur OG"
+    signal_strength:
+      name: "PVVX Signal Flur OG"
 
 # Connect 1-Wire bus with DS18B20 temperature sensors
 

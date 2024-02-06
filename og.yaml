@@ -65,9 +65,9 @@ packages:
     file: heating_channel.yaml
     vars:
       channel_number: 1
-      id: testroom1
-      frendly_name: testroom1
-      temperature_sensor: pvvx_temperature5
+      id: rumpelkammer
+      frendly_name: Rumpelkammer
+      temperature_sensor: pvvx_temperature_rumpelkammer
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -96,9 +96,9 @@ packages:
     file: heating_channel.yaml
     vars:
       channel_number: 3
-      id: testroom2
-      frendly_name: testroom2
-      temperature_sensor: pvvx_temperature5
+      id: bathroom_floor_heating
+      frendly_name: Badezimmer
+      temperature_sensor: pvvx_temperature_bathroom
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -127,9 +127,9 @@ packages:
     file: heating_channel.yaml
     vars:
       channel_number: 5
-      id: testroom3
-      frendly_name: testroom3
-      temperature_sensor: pvvx_temperature5
+      id: bedroom
+      frendly_name: Schlafzimmer
+      temperature_sensor: pvvx_temperature_bedroom
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
@@ -158,9 +158,9 @@ packages:
     file: heating_channel.yaml
     vars:
       channel_number: 7
-      id: testroom4
-      frendly_name: testroom4
-      temperature_sensor: pvvx_temperature5
+      id: bathroom_wall_heating
+      frendly_name: Badezimmer Heizkörper
+      temperature_sensor: pvvx_temperature_bathroom
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
       preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
