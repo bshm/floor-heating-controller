@@ -20,7 +20,7 @@ esp32:
 
 preferences:
   flash_write_interval: 60min
-  
+
 # Enable logging
 logger:
   level: DEBUG #NONE# ERROR #INFO #DEBUG  #VERBOSE
@@ -44,7 +44,7 @@ logger:
 # Enable Home Assistant API
 api:
   reboot_timeout: 0s
-      
+
 
 ota:
 
@@ -56,6 +56,8 @@ sn74hc595:
     clock_pin: GPIO5 #Pin connected to SN74HC595 SRCLK pin
     latch_pin: GPIO17 #Pin connected to SN74HC595 RCLK pin
     oe_pin: GPIO18 ### needed by esphome, but connected to GND (outputEnable is used only for pwm all the pin)
-    sr_count: 2 #Number of daisy-chained shift registers, up-to 4  
+    sr_count: 2 #Number of daisy-chained shift registers, up-to 4
 
 esp32_ble_tracker:
+  scan_parameters:
+    active: False

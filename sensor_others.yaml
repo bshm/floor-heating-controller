@@ -5,9 +5,14 @@ sensor:
     update_interval: 60s
     entity_category: "diagnostic"
     id: wifi_signal_db
-    
+
+  - platform: pulse_counter
+    pin: GPIO23
+    name: "Pulse Counter"
+    update_interval: 1s
+
   - platform: uptime
-    name: "${friendly_name} Uptime"    
+    name: "${friendly_name} Uptime"
     id: uptime_sensor
     update_interval: 60s
     internal: true
@@ -28,15 +33,15 @@ sensor:
                 (hours ? to_string(hours) + "h " : "") +
                 (minutes ? to_string(minutes) + "m " : "") +
                 (to_string(seconds) + "s")
-              ).c_str();      
-              
-              
+              ).c_str();
+
+
 
   # - platform: internal_temperature
     # name: "${friendly_name} Internal Temperature"
 
-text_sensor:  
+text_sensor:
   - platform: template
     name: "${friendly_name} uptime"
     id: uptime_human
-    icon: mdi:clock-start  
+    icon: mdi:clock-start
