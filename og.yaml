@@ -51,7 +51,7 @@ packages:
       # pid_kd: "4.0"
       # visual_min_temperature: "10 °C"
       # visual_max_temperature: "30 °C"
-      # visual_temperature_step: "0.1 °C"
+      # visual_temperature_step: "0.5 °C"
       # check_interval: "15min"
       # bemf_trigger_initial_value: "0.105"
       ### do not change :
@@ -70,20 +70,20 @@ packages:
       temperature_sensor: pvvx_temperature_bathroom
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
-      preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
+      preset_1_mode: HEAT #OFF, AUTO, HEAT, COOL, HEAT, FAN_ONLY, DRY
       preset_1_target_temperature_low: "19 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
       preset_1_target_temperature_high: "20 °C"
       preset_2_name: away
-      preset_2_mode: HEAT_COOL
+      preset_2_mode: HEAT
       preset_2_target_temperature_low: "18 °C"
       preset_2_target_temperature_high: "19 °C"
       preset_3_name: boost
-      preset_3_mode: HEAT_COOL
+      preset_3_mode: HEAT
       preset_3_target_temperature_low: "23 °C"
       preset_3_target_temperature_high: "24 °C"
       visual_min_temperature: "17 °C"
       visual_max_temperature: "24 °C"
-      visual_temperature_step: "0.1 °C"
+      visual_temperature_step: "0.5 °C"
       check_interval: "1min"
       bemf_trigger_initial_value: "0.105"
       # do not change :
@@ -101,20 +101,20 @@ packages:
       temperature_sensor: pvvx_temperature_rumpelkammer
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
-      preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
+      preset_1_mode: HEAT #OFF, AUTO, HEAT, COOL, HEAT, FAN_ONLY, DRY
       preset_1_target_temperature_low: "21 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
       preset_1_target_temperature_high: "23 °C"
       preset_2_name: away
-      preset_2_mode: HEAT_COOL
+      preset_2_mode: HEAT
       preset_2_target_temperature_low: "18 °C"
       preset_2_target_temperature_high: "19 °C"
       preset_3_name: boost
-      preset_3_mode: HEAT_COOL
+      preset_3_mode: HEAT
       preset_3_target_temperature_low: "23 °C"
       preset_3_target_temperature_high: "24 °C"
       visual_min_temperature: "17 °C"
       visual_max_temperature: "24 °C"
-      visual_temperature_step: "0.1 °C"
+      visual_temperature_step: "0.5 °C"
       check_interval: "1min"
       bemf_trigger_initial_value: "0.105"
       ## do not change :
@@ -132,20 +132,20 @@ packages:
       temperature_sensor: pvvx_temperature_bathroom
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
-      preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
+      preset_1_mode: HEAT #OFF, AUTO, HEAT, COOL, HEAT, FAN_ONLY, DRY
       preset_1_target_temperature_low: "21 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
       preset_1_target_temperature_high: "23 °C"
       preset_2_name: away
-      preset_2_mode: HEAT_COOL
+      preset_2_mode: HEAT
       preset_2_target_temperature_low: "18 °C"
       preset_2_target_temperature_high: "19 °C"
       preset_3_name: boost
-      preset_3_mode: HEAT_COOL
+      preset_3_mode: HEAT
       preset_3_target_temperature_low: "23 °C"
       preset_3_target_temperature_high: "24 °C"
       visual_min_temperature: "17 °C"
       visual_max_temperature: "24 °C"
-      visual_temperature_step: "0.1 °C"
+      visual_temperature_step: "0.5 °C"
       check_interval: "1min"
       bemf_trigger_initial_value: "0.105"
       ## do not change :
@@ -163,20 +163,20 @@ packages:
       temperature_sensor: pvvx_temperature_bedroom
       default_preset: home
       preset_1_name: home #ECO, AWAY, BOOST, COMFORT, HOME, SLEEP, ACTIVITY
-      preset_1_mode: HEAT_COOL #OFF, AUTO, HEAT, COOL, HEAT_COOL, FAN_ONLY, DRY
+      preset_1_mode: HEAT #OFF, AUTO, HEAT, COOL, HEAT, FAN_ONLY, DRY
       preset_1_target_temperature_low: "17 °C" #ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
       preset_1_target_temperature_high: "18 °C"
       preset_2_name: away
-      preset_2_mode: HEAT_COOL
+      preset_2_mode: HEAT
       preset_2_target_temperature_low: "17 °C"
       preset_2_target_temperature_high: "18 °C"
       preset_3_name: boost
-      preset_3_mode: HEAT_COOL
+      preset_3_mode: HEAT
       preset_3_target_temperature_low: "23 °C"
       preset_3_target_temperature_high: "24 °C"
       visual_min_temperature: "17 °C"
       visual_max_temperature: "24 °C"
-      visual_temperature_step: "0.1 °C"
+      visual_temperature_step: "0.5 °C"
       check_interval: "1min"
       bemf_trigger_initial_value: "0.105"
       ## do not change :
