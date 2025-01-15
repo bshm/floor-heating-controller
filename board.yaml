@@ -36,6 +36,7 @@ logger:
     text_sensor : ERROR
     homeassistant.sensor: ERROR
     pvvx_mithermometer: ERROR
+    pulse_counter: INFO
 
 ### debug mode :
 # logger:

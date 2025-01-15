@@ -9,3 +9,11 @@ all:
 clean:
 	docker run --rm -v "${PWD}":/config -it ghcr.io/esphome/esphome:$(ESPHOME_RELEASE) clean eg.yaml
 	docker run --rm -v "${PWD}":/config -it ghcr.io/esphome/esphome:$(ESPHOME_RELEASE) clean og.yaml
+
+.PHONY: upload-og
+upload-og:
+	docker run --rm -v "${PWD}":/config -it ghcr.io/esphome/esphome:$(ESPHOME_RELEASE) upload og.yaml
+
+.PHONY: upload-eg
+upload-eg:
+	docker run --rm -v "${PWD}":/config -it ghcr.io/esphome/esphome:$(ESPHOME_RELEASE) upload eg.yaml
